@@ -1,7 +1,7 @@
 # PiCamera
 Raspberry Pi Camera
 
-A C++ library which demonstrates the absoulte bare miniumn required to get h264 encoded video from the Raspberry Pi Camera.
+A C++ library which demonstrates the absolute bare miniumn required to get h264 encoded video from the Raspberry Pi Camera.
 
 
 
