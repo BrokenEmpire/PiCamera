@@ -15,7 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PiCamera.h" />
-    <ClInclude Include="PiCameraParameters.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{25e64023-2b7f-4a9a-ba06-8246145bc1cd}</ProjectGuid>
@@ -41,7 +40,7 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <RemoteCompileLocalCopyObjectFiles>true</RemoteCompileLocalCopyObjectFiles>
     <IncludePath>$(ALLUSERSPROFILE)\$(Platform)\opt\vc\include;$(ARMIncludePath)</IncludePath>
     <SourcePath>$(IncludePath)</SourcePath>

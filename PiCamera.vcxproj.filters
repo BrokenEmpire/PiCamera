@@ -19,8 +19,5 @@
     <ClInclude Include="PiCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PiCameraParameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

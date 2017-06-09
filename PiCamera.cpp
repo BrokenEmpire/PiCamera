@@ -1,19 +1,15 @@
 #include <iostream>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 #include "bcm_host.h"
 #include "interface/mmal/util/mmal_util.h"
 #include "interface/mmal/util/mmal_util_params.h"
 #include "interface/mmal/util/mmal_default_components.h"
 #include "interface/mmal/util/mmal_connection.h"
 #include "interface/mmal/mmal_logging.h"
-#include "PiCameraParameters.h"
 #include "PiCamera.h"
 
 PiCamera::PiCamera()
 {
-	vcos_log_register("Deimos.CamTest", VCOS_LOG_CATEGORY);
+	vcos_log_register("PiCamera", VCOS_LOG_CATEGORY);
 	bcm_host_init();
 }
 PiCamera::~PiCamera()
@@ -93,8 +89,8 @@ void PiCamera::Initialize()
 
 	userdata = new MMAL_PORT_USERDATA();
 	userdata->pool = encoderPool;
-	userdata->file_handle = fopen("testvideo.h264", "wb");
-	userdata->imv_file_handle = fopen("imuData", "wb");
+	userdata->file_handle = fopen("videoOutput.h264", "wb");
+	userdata->imv_file_handle = fopen("vectorOutput.imv", "wb");
 
 	encoderOutput->userdata = userdata;
 	mmal_port_enable(encoderOutput, encoderCallback);
